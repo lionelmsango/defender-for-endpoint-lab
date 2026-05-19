@@ -47,7 +47,7 @@ The Defender portal (security.microsoft.com) was immediately accessible with the
 
 **Screenshot 1 — Defender portal homepage showing SOC optimization dashboard:**
 
-![Defender Portal Homepage](screenshots/01_defender_portal_homepage_png.jpg)
+![Defender Portal Homepage](01_defender_portal_homepage_png.jpg)
 
 The onboarding method selection offers four options: Intune (for MDM-enrolled devices), Local Script (PowerShell), Group Policy, and VDI scripts. For a single-device lab, Local Script is the straightest path. Group Policy would require an Active Directory domain, which adds unnecessary complexity for a one-VM setup.
 
