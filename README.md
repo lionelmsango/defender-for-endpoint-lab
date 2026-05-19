@@ -1,6 +1,8 @@
 # Microsoft Defender for Endpoint: Enterprise Endpoint Security
 
-**Deutsche Kurzbeschreibung:** Deployment und Konfiguration von Microsoft Defender for Endpoint in einer Lab-Umgebung. Umfasst Device Onboarding, Sicherheitsrichtlinien (Next-Generation Protection, Firewall), Detection Testing mit PowerShell-Alerts und Incident Investigation. Dokumentiert einen vollständigen EDR-Workflow von der Geräteanmeldung bis zur Alert-Analyse im Defender-Portal.
+**Kurzbeschreibung:** 
+
+Deployment und Konfiguration von Microsoft Defender for Endpoint in einer Lab-Umgebung. Umfasst Device Onboarding, Sicherheitsrichtlinien (Next-Generation Protection, Firewall), Detection Testing mit PowerShell-Alerts und Incident Investigation. Dokumentiert einen vollständigen EDR-Workflow von der Geräteanmeldung bis zur Alert-Analyse im Defender-Portal.
 
 ---
 
