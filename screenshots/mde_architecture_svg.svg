@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650">
+  <defs>
+    <style>
+      .box-primary { fill: #0078d4; stroke: #004578; stroke-width: 2; }
+      .box-secondary { fill: #50e6ff; stroke: #0078d4; stroke-width: 2; }
+      .box-tertiary { fill: #e3f2fd; stroke: #0078d4; stroke-width: 1.5; }
+      .text-white { fill: white; font-family: 'Segoe UI', Arial, sans-serif; font-size: 18px; font-weight: 600; }
+      .text-white-small { fill: white; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+      .text-dark { fill: #000; font-family: 'Segoe UI', Arial, sans-serif; font-size: 15px; font-weight: 600; }
+      .text-dark-small { fill: #333; font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; }
+      .connector { stroke: #555; stroke-width: 2.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Main Tenant Box -->
+  <rect class="box-primary" x="225" y="30" width="450" height="70" rx="8"/>
+  <text class="text-white" x="450" y="60" text-anchor="middle">Microsoft 365 Tenant</text>
+  <text class="text-white-small" x="450" y="82" text-anchor="middle">LioDefenderLab.onmicrosoft.com</text>
+
+  <!-- Main vertical connector -->
+  <line class="connector" x1="450" y1="100" x2="450" y2="140"/>
+  
+  <!-- Horizontal branch line -->
+  <line class="connector" x1="200" y1="140" x2="700" y2="140"/>
+  
+  <!-- Left branch connector -->
+  <line class="connector" x1="280" y1="140" x2="280" y2="170"/>
+  
+  <!-- Right branch connector -->
+  <line class="connector" x1="620" y1="140" x2="620" y2="170"/>
+
+  <!-- LEFT SECTION: Microsoft Defender for Business -->
+  <rect class="box-secondary" x="50" y="170" width="460" height="55" rx="6"/>
+  <text class="text-dark" x="280" y="198" text-anchor="middle">Microsoft Defender for Business</text>
+  <text class="text-dark-small" x="280" y="215" text-anchor="middle">Portal: security.microsoft.com</text>
+
+  <!-- Defender components connector -->
+  <line class="connector" x1="280" y1="225" x2="280" y2="255"/>
+  <line class="connector" x1="120" y1="255" x2="440" y2="255"/>
+  
+  <!-- Four sub-component connectors -->
+  <line class="connector" x1="120" y1="255" x2="120" y2="280"/>
+  <line class="connector" x1="220" y1="255" x2="220" y2="280"/>
+  <line class="connector" x1="340" y1="255" x2="340" y2="280"/>
+  <line class="connector" x1="440" y1="255" x2="440" y2="280"/>
+
+  <!-- Device Onboarding Box -->
+  <rect class="box-tertiary" x="60" y="280" width="120" height="85" rx="5"/>
+  <text class="text-dark-small" x="120" y="303" text-anchor="middle" font-weight="600">Device</text>
+  <text class="text-dark-small" x="120" y="320" text-anchor="middle" font-weight="600">Onboarding</text>
+  <text class="text-dark-small" x="120" y="340" text-anchor="middle">Local Script</text>
+  <text class="text-dark-small" x="120" y="355" text-anchor="middle">(PowerShell)</text>
+
+  <!-- NGP Policy Box -->
+  <rect class="box-tertiary" x="190" y="280" width="120" height="85" rx="5"/>
+  <text class="text-dark-small" x="250" y="303" text-anchor="middle" font-weight="600">Next-Gen</text>
+  <text class="text-dark-small" x="250" y="320" text-anchor="middle" font-weight="600">Protection</text>
+  <text class="text-dark-small" x="250" y="340" text-anchor="middle">Real-time scan</text>
+  <text class="text-dark-small" x="250" y="355" text-anchor="middle">Cloud protection</text>
+
+  <!-- Firewall Box -->
+  <rect class="box-tertiary" x="320" y="280" width="120" height="85" rx="5"/>
+  <text class="text-dark-small" x="380" y="303" text-anchor="middle" font-weight="600">Firewall</text>
+  <text class="text-dark-small" x="380" y="320" text-anchor="middle" font-weight="600">Policy</text>
+  <text class="text-dark-small" x="380" y="340" text-anchor="middle">Windows</text>
+  <text class="text-dark-small" x="380" y="355" text-anchor="middle">Defender FW</text>
+
+  <!-- Incident Management Box -->
+  <rect class="box-tertiary" x="100" y="380" width="260" height="55" rx="5"/>
+  <text class="text-dark-small" x="230" y="403" text-anchor="middle" font-weight="600">Incident &amp; Alert Management</text>
+  <text class="text-dark-small" x="230" y="420" text-anchor="middle">Investigation &amp; Response Portal</text>
+
+  <!-- RIGHT SECTION: Enrolled Endpoint -->
+  <rect class="box-secondary" x="540" y="170" width="310" height="55" rx="6"/>
+  <text class="text-dark" x="695" y="198" text-anchor="middle">Enrolled Endpoint</text>
+  <text class="text-dark-small" x="695" y="215" text-anchor="middle">desktop-k3qoano</text>
+
+  <!-- Endpoint details connector -->
+  <line class="connector" x1="695" y1="225" x2="695" y2="255"/>
+
+  <!-- Endpoint Details Box -->
+  <rect class="box-tertiary" x="560" y="255" width="270" height="135" rx="5"/>
+  <text class="text-dark-small" x="695" y="278" text-anchor="middle" font-weight="600">VMware Virtual Machine</text>
+  <text class="text-dark-small" x="695" y="298" text-anchor="middle">Windows 11 Pro 25H2</text>
+  <text class="text-dark-small" x="695" y="315" text-anchor="middle">Build 26200.8457</text>
+  <line class="connector" x1="580" y1="325" x2="810" y2="325" stroke-width="1"/>
+  <text class="text-dark-small" x="695" y="343" text-anchor="middle">Microsoft Defender AV: Active</text>
+  <text class="text-dark-small" x="695" y="360" text-anchor="middle">Real-time protection: ON</text>
+  <text class="text-dark-small" x="695" y="377" text-anchor="middle">Cloud-delivered protection: ON</text>
+
+  <!-- BOTTOM SECTION: Detection Test -->
+  <rect class="box-secondary" x="150" y="470" width="600" height="70" rx="6"/>
+  <text class="text-dark" x="450" y="498" text-anchor="middle">Detection Test Workflow</text>
+  <text class="text-dark-small" x="450" y="518" text-anchor="middle">PowerShell command executed → Alert: "Suspicious PowerShell command line"</text>
+  <text class="text-dark-small" x="450" y="533" text-anchor="middle">Incident ID 1: Execution incident on one endpoint</text>
+
+  <!-- Connector from Incident Management to Detection Test -->
+  <line class="connector" x1="230" y1="435" x2="230" y2="470"/>
+  
+  <!-- Connector from Endpoint to Detection Test -->
+  <line class="connector" x1="695" y1="390" x2="695" y2="425"/>
+  <line class="connector" x1="695" y1="425" x2="600" y2="470"/>
+
+  <!-- Footer Information -->
+  <text class="text-dark-small" x="450" y="575" text-anchor="middle" fill="#666">Admin: LionelMfua@LioDefenderLab.onmicrosoft.com</text>
+  <text class="text-dark-small" x="450" y="595" text-anchor="middle" fill="#666">Risk Level: Medium | Active Alerts: 2 | Compliance Status: Meeting security policies</text>
+</svg>
