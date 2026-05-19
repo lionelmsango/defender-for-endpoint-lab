@@ -47,13 +47,13 @@ The Defender portal (security.microsoft.com) was immediately accessible with the
 
 **Screenshot 1 — Defender portal homepage showing SOC optimization dashboard:**
 
-![Defender Portal Homepage](01_defender_portal_homepage_png.jpg)
+![Defender Portal Homepage](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/01_defender_portal_homepage.png.jpg)
 
 The onboarding method selection offers four options: Intune (for MDM-enrolled devices), Local Script (PowerShell), Group Policy, and VDI scripts. For a single-device lab, Local Script is the straightest path. Group Policy would require an Active Directory domain, which adds unnecessary complexity for a one-VM setup.
 
 **Screenshot 2 — Onboarding method selection (Local Script chosen):**
 
-![Onboarding Method Selection](screenshots/02_onboarding_method_selection_png.jpg)
+![Onboarding Method Selection](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/02_onboarding_method_selection.png.jpg)
 
 After selecting Local Script, the portal generated a downloadable package: `WindowsDefenderATPLocalOnboardingScript.cmd`. I copied this to the VM (MDE-LAB-VM at this point, later renamed to desktop-k3qoano), ran it as Administrator in PowerShell, and watched the onboarding process execute.
 
@@ -64,13 +64,13 @@ Successfully onboarded machine to Microsoft Defender for Endpoint
 
 **Screenshot 3 — Onboarding script executed successfully on the VM:**
 
-![Onboarding Success](screenshots/03_onboarding_success_png.jpg)
+![Onboarding Success](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/03_onboarding_success.png.jpg)
 
 Within 5–10 minutes, the device appeared in the Defender portal's Device Inventory under Assets → Devices. The device name showed as `desktop-k3qoano` (the VM had been renamed after initial setup), status Active, risk level Medium.
 
 **Screenshot 4 — Device inventory showing enrolled device (desktop-k3qoano):**
 
-![Device Inventory](screenshots/04_device_inventory_png.jpg)
+![Device Inventory](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/04_device_inventory.png.jpg)
 
 The Medium risk level is expected for a freshly onboarded device with no alert history. Risk levels adjust based on active alerts and discovered vulnerabilities over time.
 
@@ -92,13 +92,13 @@ Within seconds, an alert appeared in the Incidents queue.
 
 **Screenshot 5 — Alert detected: "Suspicious PowerShell command line":**
 
-![Test Alert Detected](screenshots/05_test_alert_detected_png.jpg)
+![Test Alert Detected](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/05_test_alert_detected.png.jpg)
 
 The alert was categorized under Investigation & Response → Incidents, with severity Medium, category Execution, and status Active. The incident was automatically assigned ID 1 and labeled "Execution incident on one endpoint."
 
 **Screenshot 6 — Alert details showing incident graph and impacted assets:**
 
-![Alert Details Investigation](screenshots/06_alert_details_investigation_png.jpg)
+![Alert Details Investigation](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/06_alert_details_investigation.png.jpg)
 
 The Attack Story tab shows two alerts linked to this incident:
 1. "[Test Alert] Suspicious Powershell commandline"
@@ -125,7 +125,7 @@ These two settings are the foundation of modern endpoint protection. Real-time p
 
 **Screenshot 7 — NGP policy showing real-time protection and cloud protection enabled:**
 
-![NGP Policy Configuration](screenshots/07_ngp_policy_configuration_png.jpg)
+![NGP Policy Configuration](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/07_ngp_policy_configuration.png.jpg)
 
 One limitation worth noting: Defender for Business doesn't expose Attack Surface Reduction (ASR) rules in the portal. ASR rules block specific risky behaviors like Office macros, script execution from email, and credential theft attempts. They're a standard feature in Defender for Endpoint Plan 2, but in Defender for Business, you'd need to configure them through Intune or Group Policy if you wanted granular control.
 
@@ -135,7 +135,7 @@ The Firewall policy (`Firewall Windows default policy`) was also pre-configured 
 
 **Screenshot 8 — Firewall policy status showing enabled state:**
 
-![Firewall Policy Status](screenshots/08_firewall_policy_status_png.jpg)
+![Firewall Policy Status](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/08_firewall_policy_status.png.jpg)
 
 The firewall policy and NGP policy are both visible under Endpoints → Configuration management → Device configuration. This is the central location for viewing all policies applied to enrolled devices.
 
@@ -147,7 +147,7 @@ After onboarding, detection testing, and policy verification, the next step was 
 
 **Screenshot 9 — Device risk overview showing Medium risk level with active alerts:**
 
-![Device Risk Overview](screenshots/09_device_risk_overview_png.jpg)
+![Device Risk Overview](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/09_device_risk_overview.png.jpg)
 
 The device (desktop-k3qoano) shows:
 - **Risk level:** Medium
@@ -160,7 +160,7 @@ The Exposure level of "Info" indicates no critical vulnerabilities have been det
 
 **Screenshot 10 — Device Incidents and Alerts tab showing execution incident:**
 
-![Device Alerts Tab](screenshots/10_device_alerts_tab_png.jpg)
+![Device Alerts Tab](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/10_device_alerts_tab.png.jpg)
 
 The Incidents and Alerts tab lists the same execution incident visible in the main Incidents queue. This view is device-specific, which is useful when investigating a single endpoint's alert history. In an environment with hundreds of devices, you'd use this tab to answer "what has this specific machine been doing?"
 
@@ -176,7 +176,7 @@ The Vulnerability Management dashboard (Exposure management → Vulnerability ma
 
 **Screenshot 11 — Vulnerability management dashboard (0/100 exposure score, no data yet):**
 
-![Vulnerability Management Dashboard](screenshots/11_vulnerability_management_dashboard_png.jpg)
+![Vulnerability Management Dashboard](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/11_vulnerability_management_dashboard.png.jpg)
 
 The Endpoint exposure score shows **0/100**, which is the default state for a new tenant. Vulnerability scanning runs daily, so it takes 24–48 hours before discovered vulnerabilities and recommendations start populating this dashboard. In a production environment with hundreds of devices, this dashboard would show high-priority CVEs that need patching, such as outdated browser versions, unpatched OS builds, or vulnerable third-party software.
 
@@ -186,7 +186,7 @@ Microsoft Secure Score (Exposure management → Secure Score → Overview) measu
 
 **Screenshot 12 — Secure Score dashboard showing 0% (calculating, tenant too new):**
 
-![Secure Score Dashboard](screenshots/12_secure_score_dashboard_png.jpg)
+![Secure Score Dashboard](https://github.com/lionelmsango/defender-for-endpoint-lab/blob/c72b4c2143371399a7e41aa5076fd58e767e2ee1/screenshots/12_secure_score_dashboard.png.jpg)
 
 The score shows **0%** with a message: "Microsoft is calculating your Secure Score, which usually takes 2-4 days when your tenant was created." This is expected behavior. Secure Score calculation requires baseline telemetry from enrolled devices, which takes a few days to accumulate after tenant creation.
 
@@ -213,8 +213,6 @@ Once populated, Secure Score provides actionable recommendations like "Enable MF
 ---
 
 ## Lessons Learned
-
-**Windows 11 25H2 requires manual MDE Sense Client installation.** Microsoft removed the Defender for Endpoint Sense Client from the base Windows 11 image starting with 24H2. If you try to onboard a 25H2 or later VM without first running `DISM /online /Add-Capability /CapabilityName:Microsoft.Windows.Sense.Client~~~~`, the onboarding script will execute without error but the device won't appear in the portal. This isn't documented in the onboarding wizard itself, which cost me about an hour of troubleshooting before finding the Microsoft support article.
 
 **Defender for Business is not Defender for Endpoint Plan 2.** This limitation became apparent when searching for Attack Surface Reduction rules, custom detection rules, and advanced hunting features. They simply don't exist in the Defender for Business portal. The product is intentionally simplified for SMB environments. For a portfolio project targeting enterprise IT admin roles, this means the project demonstrates endpoint protection and alert investigation, but not the advanced threat hunting capabilities that larger organisations rely on. Worth knowing before claiming "full MDE experience" on a resume.
 
